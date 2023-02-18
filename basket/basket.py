@@ -19,11 +19,9 @@ class Basket():
         """
         Adding and updating the users basket session data
         """
-        product_id = str(product.id)
+        product_id = product.id
 
-        if product_id in self.basket:
-            self.basket[product_id]['qty'] = qty
-        else:
-            self.basket[product_id] = {'price': str(product.price), 'qty': qty}
+        if product_id not in self.basket:
+            self.basket[product_id] = {'price': str(product.price), 'qty': int(qty)}
 
-        self.save()
+        self.session.modified = True
