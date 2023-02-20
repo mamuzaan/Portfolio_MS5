@@ -26,3 +26,25 @@
     transition-duration: 0.4s;
     background-color: #fff;
 }
+
+/* Bootstrap */
+.dropdown-toggle::after {
+    display: none;
+}
+.dropdown-menu{
+    top:58px;
+    left:0px;
+    padding:10px;
+}
+
+@media (min-width: 1000px){
+    .container{
+        max-width: 1000px;
+    }
+}
+@media (max-width: 1200px){
+    .container{
+        max-width: 100%;
+        padding:0 24px;
+    }
+}
